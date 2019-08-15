@@ -1,0 +1,10 @@
+img {
+    width: 100%;
+    /*поставила max-height: 250px; только для того, что бы более компактно выглядели картинки*/
+    max-height: 250px;
+    object-fit: contain;
+}
+.main {
+    max-width: 960px;
+    margin: 0 auto;
+}

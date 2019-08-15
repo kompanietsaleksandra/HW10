@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+      <link rel="stylesheet" href="css/swiper.min.css">
+      <link rel="stylesheet" href="css/glide.core.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+      <link rel="stylesheet" href="css/main.css">
+   </head>
+   <body>
+      <header></header>
+      <main class="main">
+         <div class="slider-cwiper">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+               <!-- Additional required wrapper -->
+               <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="img/img1.jpg"></div>
+                  <div class="swiper-slide"><img src="img/img2.jpg"></div>
+                  <div class="swiper-slide"><img src="img/img3.jpg"></div>
+                  ...
+               </div>
+               <!-- If we need pagination -->
+               <div class="swiper-pagination"></div>
+
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"></div>
+
+               <!-- If we need scrollbar -->
+               <div class="swiper-scrollbar"></div>
+            </div>
+         </div>
+         <div class="slider-glide">
+            <div class="glide">
+               <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                     <li class="glide__slide"><img src="img/pic2.jpg" title="Funky roots"></li>
+                     <li class="glide__slide"><img src="img/pic3.jpg" title="The long and winding road"></li>
+                     <li class="glide__slide"><img src="img/pic2.jpg" title="Happy trees"></li>
+                  </ul>
+               </div>
+               <div class="glide__arrows" data-glide-el="controls">
+                  <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                  <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+               </div>
+            </div>
+         </div>
+         <div class="slider-bx">
+            <div class="slider bxslider">
+               <div><img src="img/pic2.jpg" title="Funky roots"></div>
+               <div><img src="img/pic3.jpg" title="The long and winding road"></div>
+               <div><img src="img/pic2.jpg" title="Happy trees"></div>
+            </div>
+         </div>
+      </main>
+      <footer></footer>
+      <script src="js/swiper.min.js"></script>
+      <script src="js/glide.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+      <script>
+          var mySwiper = new Swiper ('.swiper-container', {
+              // Optional parameters
+              direction: 'horizontal',
+              loop: true,
+
+              // If we need pagination
+              pagination: {
+                  el: '.swiper-pagination',
+              },
+
+              // Navigation arrows
+              navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+              },
+
+              // And if we need scrollbar
+              scrollbar: {
+                  el: '.swiper-scrollbar',
+              },
+          })
+      </script>
+      <script>
+          new Glide('.glide').mount()
+      </script>
+      <script>
+          $('.bxslider').bxSlider({
+              auto: true,
+              autoControls: true,
+              stopAutoOnClick: true,
+              pager: true,
+          });
+      </script>
+   </body>
+</html>
